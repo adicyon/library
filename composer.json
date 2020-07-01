@@ -1,0 +1,27 @@
+{
+  "name": "apply/library",
+  "description": "Plugins library",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {
+    "symfony/finder": "*",
+    "illuminate/support": "*",
+    "illuminate/database": "*"
+  },
+  "autoload": {
+    "files": [
+      "helpers/library.php"
+    ],
+    "psr-4": {
+      "Apply\\Library\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Apply\\Library\\Providers\\CoreServiceProvider"
+      ]
+    }
+  }
+}

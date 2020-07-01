@@ -1,0 +1,44 @@
+<?php
+
+namespace $NAMESPACE$\Apply;
+
+use Apply\Library\Engine;
+use $NAMESPACE$\Providers\AppServiceProvider;
+use $NAMESPACE$\Providers\RouteServiceProvider;
+use Apply\Library\Support\Providers\SetupServiceProvider;
+use $NAMESPACE$\$PACKAGE$;
+
+class Setup extends SetupServiceProvider
+{
+    /**
+     * Bootstrap any Library services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this
+            ->registerProviders()
+            //->registerAlias()
+            ->registerConfig('$NAME$')
+            //->registerDatabase()
+            //->registerHelpers()
+            //->registerViews()
+            //->registerRouteProvider(RouteServiceProvider::class)
+        ;
+
+        Engine::collect('$NAME$', new $PACKAGE$());
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [
+            AppServiceProvider::class,
+        ];
+    }
+}

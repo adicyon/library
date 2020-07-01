@@ -1,0 +1,27 @@
+{
+    "name": "$COLLECTION$/$NAME$",
+    "description": "The Apply $PACKAGE$ Package.",
+    "keywords": ["apply", "library", "$DRIVER$", "$NAME$"],
+    "type": "apply",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Apply",
+            "email": "apply@creatyon.com"
+        }
+    ],
+    "require": {
+       "apply/library": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "$DRIVERSPACE$\\$PACKAGE$\\": "src/"
+        }
+    },
+    "extra": {
+        "apply": {
+            "vendor": "$COLLECTION$/$NAME$"
+        }
+    }
+}
