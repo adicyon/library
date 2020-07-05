@@ -12,26 +12,40 @@ trait HasGraphql
      * @param $folder
      * @return $this
      */
-    public function registerGraphql($folder = null): self
+    public function registerGraphql($type = 'graphql', $folder = null): self
     {
         $path = $folder ?? $this->item->path('graphql');
 
         $files = Finder::create()->files()
             ->in($path)
-            ->name('*.graphql')
+            ->name('*.'.$type)
             ->contains([]);
 
-        foreach($files as $item)
+        if ($type == 'php')
         {
-            app('events')->listen(
-                BuildSchemaString::class,
-                function () use ($item): string {
-                    return $item->getContents();
-                }
-            );
+            foreach($files as $item)
+            {
+                $config = $this->app['config']->get('graphql', []);
+                $data = require $item->getPathname();
+                $this->app['config']->set('graphql',
+                    array_merge_recursive($data, $config)
+                );
+            }
+        }
+
+        if ($type == 'graphql')
+        {
+            foreach($files as $item)
+            {
+                app('events')->listen(
+                    BuildSchemaString::class,
+                    function () use ($item): string {
+                        return $item->getContents();
+                    }
+                );
+            }
         }
 
         return $this;
     }
-
 }
