@@ -40,7 +40,6 @@ trait HasGenerate
         $uuid = (string) Str::uuid();
         $date = date('Y-m-d');
 
-
         $data = [
             'name' => strtolower($name),  // name plugin
             'package' => $package,
@@ -51,8 +50,6 @@ trait HasGenerate
             'collectSpace' => $driverSpace,
             'collection' => $collection
         ];
-
-
 
         if ($filesystem->isDirectory($itemPath))
             return ['status' => 'error', 'message' => 'Sorry "'.$name.'" '.$this->collect().' folder already exist!!!', 'id' => $uuid];

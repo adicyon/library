@@ -133,7 +133,7 @@ class Engine
 
         foreach ($items as $element)
         {
-            $method = $element->namespace('Apply\Setup');
+            $method = $element->namespace('Providers\ApplyServiceProvider');
             $app->register(new $method($app, $element));
         }
     }

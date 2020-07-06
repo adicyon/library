@@ -63,7 +63,7 @@ return [
             'composer'              => 'composer.json',
             'configCollection'      => 'config/configCollection.php',
             'ClassCollection'       => 'src/ClassCollection.php',
-            'SetupCollection'      => 'src/Apply/Setup.php',
+            'ApplyServiceProvider'  => 'src/Providers/ApplyServiceProvider.php',
             'RouteServiceProvider'  => 'src/Providers/RouteServiceProvider.php',
             'AppServiceProvider'    => 'src/Providers/AppServiceProvider.php',
             'Controller'            => 'src/Http/Controllers/Controller.php',
