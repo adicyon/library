@@ -1,10 +1,8 @@
 <?php
 
-namespace $NAMESPACE$\Apply;
+namespace $NAMESPACE$\Providers;
 
 use Apply\Library\Engine;
-use $NAMESPACE$\Providers\AppServiceProvider;
-use $NAMESPACE$\Providers\RouteServiceProvider;
 use Apply\Library\Support\Providers\SetupServiceProvider;
 use $NAMESPACE$\$PACKAGE$;
 

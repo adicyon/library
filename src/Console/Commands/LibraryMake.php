@@ -32,7 +32,6 @@ class LibraryMake extends Command
 
         $module = library()->generate($this->argument('name'), $collect);
 
-
         if ($module['status'] == 'error')
             $this->error($module['message']);
 

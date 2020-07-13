@@ -15,6 +15,7 @@ class Plugin extends Model implements Arrayable, ArrayAccess, Jsonable, JsonSeri
     use Concerns\HasArrayable,
         Concerns\HasArrayAccess,
         Concerns\HasActions,
+        Concerns\HasAssets,
         Concerns\HasAlias,
         Concerns\HasCollect,
         Concerns\HasComposer,
