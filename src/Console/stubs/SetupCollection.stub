@@ -18,7 +18,7 @@ class Setup extends SetupServiceProvider
         $this
             ->registerProviders()
             //->registerAlias()
-            ->registerConfig('$NAME$')
+            ->registerConfig('libraries.$NAME$')
             //->registerDatabase()
             //->registerHelpers()
             //->registerViews()

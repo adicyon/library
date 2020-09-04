@@ -15,7 +15,7 @@ trait HasConfig
      */
     public function config($key = null)
     {
-        $config = 'library.'.$this->collect();
+        $config = 'libraries.'.$this->collect();
         return  $key ? config( $config.'.'.$key) : config( $config);
     }
 

@@ -16,6 +16,7 @@ use Apply\Library\Console\Generators\ProviderMakeCommand;
 use Apply\Library\Console\Generators\RequestMakeCommand;
 use Apply\Library\Console\Generators\ResourceMakeCommand;
 use Apply\Library\Console\Generators\SeederMakeCommand;
+use Apply\Library\Module;
 use Apply\Library\Plugin;
 use Illuminate\Support\ServiceProvider;
 
@@ -52,6 +53,7 @@ class LibraryServiceProvider extends ServiceProvider
     public function registerDefaultCollect()
     {
         library()->collect('plugin', new  Plugin());
+        library()->collect('module', new  Module());
         library()->collect('collect', new Collect());
     }
 
