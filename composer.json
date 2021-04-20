@@ -4,9 +4,7 @@
   "type": "library",
   "license": "MIT",
   "minimum-stability": "dev",
-  "require": {
-    "apply/composer": "*"
-  },
+  "require": {},
   "autoload": {
     "files": [
       "helpers/library.php"
