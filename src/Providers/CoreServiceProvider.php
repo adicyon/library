@@ -22,7 +22,7 @@ class CoreServiceProvider extends ServiceProvider
       $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/module.php'), 'libraries.module');
     $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/collect.php'), 'libraries.collect');
 
-    $this->app->register(LibraryServiceProvider::class);
+   // $this->app->register(LibraryServiceProvider::class);
   }
 
   /**
