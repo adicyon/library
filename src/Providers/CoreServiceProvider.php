@@ -17,10 +17,10 @@ class CoreServiceProvider extends ServiceProvider
       define('LIBRARY_PATH', realpath(__DIR__.'/../../'));
     }
 
-    $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/library.php'), 'library');
-      $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/plugin.php'), 'libraries.plugin');
-      $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/module.php'), 'libraries.module');
-    $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/collect.php'), 'libraries.collect');
+//     $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/library.php'), 'library');
+//       $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/plugin.php'), 'libraries.plugin');
+//       $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/module.php'), 'libraries.module');
+//     $this->mergeConfigFrom(realpath(LIBRARY_PATH . '/config/collect.php'), 'libraries.collect');
 
    // $this->app->register(LibraryServiceProvider::class);
   }
